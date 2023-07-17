@@ -283,14 +283,12 @@ bitflags! {
 
         /// `IUTF8`
         #[cfg(not(any(
+            freebsdlike,
+            netbsdlike,
             solarish,
             target_os = "aix",
-            target_os = "dragonfly",
             target_os = "emscripten",
-            target_os = "freebsd",
             target_os = "haiku",
-            target_os = "netbsd",
-            target_os = "openbsd",
             target_os = "redox",
         )))]
         const IUTF8 = c::IUTF8;
@@ -308,9 +306,8 @@ bitflags! {
         /// `OLCUC`
         #[cfg(not(any(
             apple,
+            freebsdlike,
             target_os = "aix",
-            target_os = "dragonfly",
-            target_os = "freebsd",
             target_os = "netbsd",
             target_os = "redox",
         )))]
@@ -1118,15 +1115,11 @@ impl SpecialCodeIndex {
 
     /// `VSWTC`
     #[cfg(not(any(
-        apple,
+        bsd,
         solarish,
         target_os = "aix",
-        target_os = "dragonfly",
-        target_os = "freebsd",
         target_os = "haiku",
-        target_os = "netbsd",
         target_os = "nto",
-        target_os = "openbsd",
     )))]
     pub const VSWTC: Self = Self(c::VSWTC as usize);
 
