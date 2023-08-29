@@ -1,3 +1,5 @@
+#![allow(unexpected_cfgs)]
+#![allow(elided_lifetimes_in_paths)]
 //! `rustix` provides efficient memory-safe and [I/O-safe] wrappers to
 //! POSIX-like, Unix-like, Linux, and Winsock2 syscall-like APIs, with
 //! configurable backends.
