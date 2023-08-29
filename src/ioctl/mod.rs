@@ -306,7 +306,7 @@ type _RawOpcode = c::c_int;
 type _RawOpcode = c::c_int;
 
 // Every BSD I looked at, Haiku and Redox uses an unsigned long.
-#[cfg(any(apple, bsd, target_os = "redox", target_os = "haiku"))]
+#[cfg(any(apple, bsd, target_os = "redox", target_os = "haiku", target_os = "hurd"))]
 type _RawOpcode = c::c_ulong;
 
 // Solaris, Fuchsia, Emscripten and WASI use an int

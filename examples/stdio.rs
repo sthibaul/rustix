@@ -122,6 +122,7 @@ fn show<Fd: AsFd>(fd: Fd) -> io::Result<()> {
                 target_os = "aix",
                 target_os = "emscripten",
                 target_os = "haiku",
+                target_os = "hurd",
                 target_os = "redox",
             )))]
             if term.input_modes.contains(InputModes::IUTF8) {
@@ -216,6 +217,7 @@ fn show<Fd: AsFd>(fd: Fd) -> io::Result<()> {
                 solarish,
                 target_os = "emscripten",
                 target_os = "haiku",
+                target_os = "hurd",
                 target_os = "redox",
             )))]
             if term.control_modes.contains(ControlModes::CMSPAR) {
@@ -296,6 +298,7 @@ fn show<Fd: AsFd>(fd: Fd) -> io::Result<()> {
                 solarish,
                 target_os = "aix",
                 target_os = "haiku",
+                target_os = "hurd",
                 target_os = "nto",
             )))]
             println!(
